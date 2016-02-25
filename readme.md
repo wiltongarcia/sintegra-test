@@ -1,27 +1,25 @@
-## Laravel PHP Framework
+# Sintegra Test
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Requisitos Funcionais
+1) Banco de Dados:
+Criar uma tabela usuario (id, usuario, senha);
+Criar uma tabela sintegra (id, idusuario, cnpj, resultado_json);
+2) API:
+Desenvolver uma API Rest, com autenticação (utilizar a tabela usuario), que receberá um CNPJ como parâmetro e realizar uma requisição no Sintegra Espirito Santo;
+Parsear os dados utilizando RegEX e retornar um JSON;
+Salvar os dados parseados na tabela sintegra;
+3) Tela:
+Desenvolver uma tela de autenticação (utilizar a tabela usuario);
+Desenvolver uma tela com um campo de CNPJ e botão de pesquisar, para realizar a chamada na API desenvolvida no item anterior e apresentar os dados do JSON retornado na tela;
+Desenvolver uma tela para listar as consultas salvas, com possibilidade de excluir o registro do banco de dados;
+## Requisitos :
+1) PHP5;
+2) ZendFramework 1.7 ou Laravel 5.1;
+3) MySQL (Banco de Dados);
+4) Bootstrap 3 (Tela);
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+## Especificações do Desenvolvedor
+- Desenvolvido usando o Laravel 5.1
+- Alterei o nome das tabelas de usuarios para users e sintegra para results
+- Utilizei session para o login da api devido a dinamica dos requisitos, caso fosse uma api para outros sites usaria JTW(https://jwt.io/)
+- Como o layout do json não estava definido nos requisitos desenvolvi da forma mais facil e performatica para o backend
