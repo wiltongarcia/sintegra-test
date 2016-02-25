@@ -79,10 +79,20 @@ class AuthController extends Controller
     }
 
     /**
-     * undocumented function
+     * Log the user out of the application.
      *
      * @return void
-     * @author yourname
+     */
+    public function getLogout()
+    {
+        session()->flush();
+        return redirect('auth/login');
+    }
+
+    /**
+     * Return login username
+     *
+     * @return string
      **/
     protected function loginUsername()
     {
