@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Auth;
 use Closure;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 
 /**
  * Api Middleware
@@ -13,6 +14,7 @@ use Closure;
  */
 class ApiResult
 {
+    use ValidatesRequests;
     /**
      * Get the user id
      *
@@ -22,6 +24,17 @@ class ApiResult
      */
     public function handle($request, Closure $next)
     {
+        $rules = array(
+            'cnpj' => 'required|cnpj_mascara',
+        );
+
+        $validator = \Validator::make($request->all(), $rules);
+        if($validator->fails())
+        {
+            $messages = $validator->messages();
+            return response(['messages' => $messages]);
+        }
+
         $id = Auth::user()->id;
         $request->attributes->add(['user_id' => $id]);
         return $next($request);

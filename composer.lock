@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a82974aa07bc8a271dce0e3eb503deaa",
-    "content-hash": "e7fb272d6f02d101aa2c19379b6476ac",
+    "hash": "d512cfcf35601eeeed8c209ae024ea00",
+    "content-hash": "7ff71d6ee1ad79952226ca1358b8a1e2",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1233,55 +1233,6 @@
             "time": "2015-11-25 19:54:31"
         },
         {
-            "name": "resultsystems/validation",
-            "version": "1.0.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/resultsystems/validation.git",
-                "reference": "144d0b76486a7bcd75951ebd4143fc122e62b0be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/resultsystems/validation/zipball/144d0b76486a7bcd75951ebd4143fc122e62b0be",
-                "reference": "144d0b76486a7bcd75951ebd4143fc122e62b0be",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "5.0.*|5.1.*",
-                "php": ">=5.5.9",
-                "respect/validation": "~0.9"
-            },
-            "require-dev": {
-                "laravel/framework": "5.1.*",
-                "orchestra/testbench": "3.1.x@dev",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ResultSystems\\Validation\\": "src/Validation"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Leandro Henrique Reis",
-                    "email": "resultsystems@gmail.com"
-                }
-            ],
-            "description": "Inspired 'KennedyTedesco Validation' - The power of 'Respect Validation' on Laravel.",
-            "keywords": [
-                "laravel",
-                "respect",
-                "rules",
-                "validation"
-            ],
-            "time": "2015-10-01 01:35:31"
-        },
-        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.1",
             "source": {
@@ -2201,6 +2152,59 @@
                 "environment"
             ],
             "time": "2015-05-30 15:59:26"
+        },
+        {
+            "name": "wiltongarcia/validation",
+            "version": "1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wiltongarcia/validation.git",
+                "reference": "b63608ab050e01d67fd50e8a583b4b4a02fe26aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wiltongarcia/validation/zipball/b63608ab050e01d67fd50e8a583b4b4a02fe26aa",
+                "reference": "b63608ab050e01d67fd50e8a583b4b4a02fe26aa",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9",
+                "respect/validation": "~0.9"
+            },
+            "require-dev": {
+                "laravel/framework": "5.1.*",
+                "orchestra/testbench": "3.1.x@dev",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ResultSystems\\Validation\\": "src/Validation"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leandro Henrique Reis",
+                    "email": "resultsystems@gmail.com"
+                },
+                {
+                    "name": "Wilton Garcia",
+                    "email": "wiltonog@gmail.com"
+                }
+            ],
+            "description": "Inspired 'KennedyTedesco Validation' - The power of 'Respect Validation' on Laravel.",
+            "keywords": [
+                "laravel",
+                "respect",
+                "rules",
+                "validation"
+            ],
+            "time": "2016-02-25 15:38:01"
         }
     ],
     "packages-dev": [
