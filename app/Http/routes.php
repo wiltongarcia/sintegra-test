@@ -13,6 +13,7 @@
 
 Route::get('/','HomeController@getHome');
 Route::get('home','HomeController@getHome');
+Route::get('results/search', 'HomeController@getHome');
 
 // Authentication Routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -25,4 +26,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // Result Routes
 Route::get('results/list', 'ResultController@getList');
-Route::post('results/search', 'ResultController@getList');
+Route::post('results/delete', 'ResultController@postDelete');
+
+// API Routes
+Route::post('api/results/search', 'ApiController@search')
+    ->middleware(['auth', 'apiresult', 'resultindb', 'resultrequest', 'resultparse', 'resultsaveindb']);
